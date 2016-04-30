@@ -37,7 +37,7 @@ contract Quote {
   /**
    * Set the details specific to this pizza 
    */
-  function setUpPizzaDetails(uint price, string products, address oracleAddress) {
+  function setUpQuoteDetails(uint price, string products, address oracleAddress) {
     stateMessage = "Quote details set";
     message = stateMessage;
     oracle = oracleAddress;
