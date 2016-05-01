@@ -63,7 +63,7 @@ class Swap4Controller {
           "method": "setUpContactDetails",
           "args": {
             "contactName": $scope.contactContract.contactName,
-			"accountOwner": $scope.contactContract.contactOwner,
+			"contactOwner": $scope.contactContract.contactOwner,
 			"title": $scope.contactContract.title,
 			"email": %scope.contactContract.email,
 			"phone": $scope.contactContract.phone
