@@ -6,32 +6,32 @@ toast
     .row
       .col-md-10.col-md-offset-1.text-center
         .col-md-8.col-md-offset-2
-          h1 Pizza: 
+          h1 Quote: 
             br
             span.contract-id {{contract.address}}
           h1(ng-show="contractState.stateInt < 5") Status: 
-            span.status Open pizza contract
+            span.status Open Quote
           h1(ng-show="contractState.stateInt == 5") Status: 
-            span.status Closed pizza contract
+            span.status Closed Quote
           .list-group.text-left
             .list-group-item
               p 
-                strong Contract Address: 
+                strong Quote Address: 
                 a.contract-detail(href="{{apiURL}}account?address={{contract.address}}", target="_blank")   {{contract.address}}
               p 
-                strong Contract Balance: 
+                strong Quote Balance: 
                 span.contract-detail {{contract.balance}}
               p 
                 strong Price: 
-                span.contract-detail {{contractState.pizzaPrice}}
+                span.contract-detail {{contractState.quotePrice}}
               p 
-                strong Contract Status: 
+                strong Quote Status: 
                 span.contract-detail {{contractState.stateMessage}}
               p
                 strong Topping: 
-                span.contract-detail {{contractState.pizzaToppings}}
-          .btn.btn-primary(ng-click="showOrderModal()", ng-show="name != 'pizzaMaker' && contractState.stateInt < 3") Fund Pizza Contract To Order 
-          a(href="/swap/{{contract.address}}/events").btn.btn-primary( ng-show="contractState.stateMessage == 'Buyer funded pizza contract'") Rate Delivery Satisfaction
+                span.contract-detail {{contractState.quoteProducts}}
+          .btn.btn-primary(ng-click="showOrderModal()", ng-show="name != 'dom' && contractState.stateInt < 3") Buy Quote To Order 
+          a(href="/swap/{{contract.address}}/events").btn.btn-primary( ng-show="contractState.stateMessage == 'Buyer accepted the quote'") Rate Quote Satisfaction
 
       
 .modal.fade#sign-transaction
@@ -39,7 +39,7 @@ toast
     .modal-content
       .modal-header
         button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-        h4.modal-title  Sign Transaction &amp; Fund Contract
+        h4.modal-title  Sign Transaction &amp; Buy Quote
       .modal-body
         .form-control-wrapper
           input#inputEmail.form-control.empty(type='password', placeholder='Password', ng-model="password")
@@ -51,5 +51,5 @@ toast
   .modal-dialog
     .modal-content
       .modal-header
-        h4.modal-title  Mining transaction...
+        h4.modal-title  Accepting Quote...
       .modal-body
