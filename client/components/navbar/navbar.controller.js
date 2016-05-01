@@ -52,6 +52,12 @@ class NavbarController {
     $scope.agreement = function(){
       $location.path('/agreement')
     }
+    $scope.agreement = function(){
+      $location.path('/orders')
+    }
+    $scope.agreement = function(){
+      $location.path('/assets')
+    }
   }
 }
 
