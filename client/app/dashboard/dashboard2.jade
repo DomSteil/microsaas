@@ -1,0 +1,52 @@
+navbar
+
+.internal--page__wrapper.dashboard-page
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h1 MicroSaas
+        .panel.panel-default.col-md-5
+          .panel-body
+            |  
+            p 
+              strong Main Address: 
+              | {{user}}
+            p 
+              strong UST: 
+              br
+              | {{balance}}
+        .col-md-7
+          a.btn.btn-primary.pull-right(href="/swap/new", ng-show="name == 'Dom'")
+            span.glyphicon.glyphicon-plus 
+            &nbsp;
+            | New Account
+
+    .row
+      .col-md-10.col-md-offset-1
+
+        h3(ng-show="accounts.length == 0 ") No accounts yet
+
+        table.table.table-striped(ng-show=" accounts.length >= 1 ")
+          thead
+            tr
+              th Account Name 
+              th Account Owner
+              th Type
+              th Industry
+              th Customer Rating
+              th Description
+          tbody
+            tr(ng-repeat="account in accounts | orderBy: 'stateInt'")
+              td 
+                a(href="/swap/{{account.address}}/issuance") {{account.id}} 
+              td {{account.accountName}}
+              td {{account.accountOwner}}
+              td {{account.type}}
+              td {{account.industry}}
+              td {{account.customerRating}}
+              td {{account.description}}
+              td(ng-show="account.stateInt < 5") OPEN 
+              td(ng-show="account.stateInt == 5") CLOSED 
+        
+
+footer
