@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('pizzaSwapApp')
+angular.module('microsaas')
   .config(function($stateProvider) {
     $stateProvider
       .state('main', {
