@@ -30,13 +30,13 @@ class Dashboard4Controller {
 
 
     $http.get(appConfig.keyserver + 'contracts/Contact').then(response => {
-      response.data.forEach(account => {
+      response.data.forEach(contract => {
         $http.get(appConfig.keyserver + 'contracts/Contact/' + contract + '/state/').then(response => {
           console.log("MICROSAAScontact");
           console.log(response);
-          response.data.address = account;
-          response.data.id = account.substr(0, 4);
-          $scope.account.push(response.data);
+          response.data.address = contract;
+          response.data.id = contract.substr(0, 4);
+          $scope.contract.push(response.data);
         });
       });
     });
