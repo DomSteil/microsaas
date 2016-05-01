@@ -68,5 +68,5 @@ class Events3Controller {
 }
 
 angular.module('microsaas')
-  .controller('EventsController', EventsController);
+  .controller('Events3Controller', Events3Controller);
 })();
