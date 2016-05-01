@@ -67,8 +67,8 @@ class Swap3Controller {
           "method": "setUpOpportunityDetails",
           "args": {
             "price": $scope.opportunityContract.price,
-            "accountName": $scope.opportunityContract.accountName,
-			"accountOwner": $scope.opportunityContract.accountOwner,
+            "opportunityName": $scope.opportunityContract.opportunityName,
+			"opportunityOwner": $scope.opportunityContract.opportunityOwner,
 			"type": $scope.opportunityContract.type,
 			"industry": %scope.opportunityContract.industry,
 			"customerRating": $scope.opportunityContract.customerRating,
