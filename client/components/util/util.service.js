@@ -56,7 +56,7 @@ function UtilService($window) {
   return Util;
 }
 
-angular.module('pizzaSwapApp.util')
+angular.module('microsaas.util')
   .factory('Util', UtilService);
 
 })();
