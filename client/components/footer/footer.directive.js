@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('pizzaSwapApp')
+angular.module('microsaas')
   .directive('footer', function () {
     return {
       templateUrl: 'components/footer/footer.html',
