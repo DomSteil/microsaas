@@ -36,7 +36,7 @@ class Dashboard3Controller {
           console.log(response);
           response.data.address = contract;
           response.data.id = contract.substr(0, 4);
-          $scope.contract.push(response.data);
+          $scope.opportunities.push(response.data);
         });
       });
     });
