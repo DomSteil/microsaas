@@ -31,8 +31,8 @@ class Dashboard7Controller {
 
     $http.get(appConfig.keyserver + 'contracts/Contract').then(response => {
       response.data.forEach(contract => {
-        $http.get(appConfig.keyserver + 'contracts/Contract/' + contract + '/state/').then(response => {
-          console.log("MICROSAAScontract");
+        $http.get(appConfig.keyserver + 'contracts/Order/' + contract + '/state/').then(response => {
+          console.log("MICROSAASorder");
           console.log(response);
           response.data.address = contract;
           response.data.id = contract.substr(0, 4);
