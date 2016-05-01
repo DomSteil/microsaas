@@ -40,9 +40,9 @@ navbar
                 a(href="/swap/{{quote.address}}/issuance") {{quote.id}} 
               td {{quote.quoteName}}
               td {{quote.quoteProducts}}
-              td {{contact.quotePrice}}
-              td(ng-show="contact.stateInt < 5") OPEN 
-              td(ng-show="contact.stateInt == 5") CLOSED 
+              td {{quote.quotePrice}}
+              td(ng-show="quote.stateInt < 5") OPEN 
+              td(ng-show="quote.stateInt == 5") CLOSED 
         
 
 footer
