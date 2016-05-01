@@ -36,7 +36,7 @@ navbar
               th Activation Date
               th Status
           tbody
-            tr(ng-repeat="order in orderss | orderBy: 'stateInt'")
+            tr(ng-repeat="order in orders | orderBy: 'stateInt'")
               td 
                 a(href="/swap/{{order.address}}/issuance") {{order.id}} 
               td {{order.orderName}}
