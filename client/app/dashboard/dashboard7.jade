@@ -34,6 +34,7 @@ navbar
               th Products
               th Price
               th Activation Date
+              th Order Status
               th Status
           tbody
             tr(ng-repeat="order in orders | orderBy: 'stateInt'")
@@ -43,6 +44,7 @@ navbar
               td {{order.orderProducts}}
               td {{order.orderPrice}}
               td {{order.activationDate}}
+              td {{order.orderStatus}}
               td(ng-show="order.stateInt < 5") OPEN 
               td(ng-show="order.stateInt == 5") CLOSED 
         
