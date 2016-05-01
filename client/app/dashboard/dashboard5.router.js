@@ -5,8 +5,8 @@ angular.module('microsaas')
     $stateProvider
       .state('dashboard', {
         url: '/dashboard/{name:string}',
-        templateUrl: 'app/dashboard/dashboard5.html',
-        controller: 'DashboardController',
+        templateUrl: 'app/dashboard/dashboard.html',
+        controller: 'Dashboard4Controller',
         controllerAs: 'dashboard'
       });
   });
