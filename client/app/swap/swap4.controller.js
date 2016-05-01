@@ -108,7 +108,7 @@ class Swap4Controller {
 
 }
 
-angular.module('pizzaSwapApp')
+angular.module('microsaas')
   .controller('Swap4Controller', Swap4Controller);
 
 })();
