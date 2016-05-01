@@ -46,6 +46,6 @@ class Dashboard3Controller {
 }
 
 angular.module('microsaas')
-  .controller('DashboardController', DashboardController);
+  .controller('Dashboard3Controller', Dashboard3Controller);
 
 })();
