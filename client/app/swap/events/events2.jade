@@ -1,1 +1,32 @@
 
+navbar
+
+.internal--page__wrapper
+  .container
+    .row
+      .col-md-10.col-md-offset-1.text-center
+        h1 Quote: 
+            br
+            span.contract-id {{id}}
+        .col-md-6.col-md-offset-3
+          p.lead Tell the quote verification oracle if the quote was accurate.
+          .list-group
+            .list-group-item
+              .btn.btn-primary.btn-block(ng-click="rateQuote(true)") Accurate
+              .btn.btn-primary.btn-block(ng-click="rateQuote(false)") InAccurate
+
+.modal.fade#quoteConfirmation
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4.modal-title  Quote Status
+      .modal-body
+        p.lead(ng-show="isAccurate") The quote has been accepted! :)
+        p.lead(ng-show="!isAccurate") The quote was rejected. :(  
+.modal.fade#mining-transaction
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4.modal-title  Accepting Quote...
+      .modal-body
