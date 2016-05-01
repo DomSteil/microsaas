@@ -9,7 +9,10 @@ class Swap8Controller {
     $scope.assetContract= {
       assetName: '',
       assetPrice: '',
-	  products: ''
+	  products: '',
+	  activationDate: '',
+	  assetStatus: ''
+	  
       //,
       //oracleAddress: ''
     };
@@ -60,9 +63,11 @@ class Swap8Controller {
           "password": "thepass",
           "method": "setUpAssetDetails",
           "args": {
-            "orderName": $scope.assetContract.assetName,
-			"orderPrice": $scope.assetContract.assetPrice,
-			"products": $scope.assetContract.products
+            "assetName": $scope.assetContract.assetName,
+			"assetPrice": $scope.assetContract.assetPrice,
+			"products": $scope.assetContract.products,
+			"activationDate": $scope.assetContract.activationDate,
+			"assetStatus": $scope.assetContract.assetStatus,
 			
 			
             //,
