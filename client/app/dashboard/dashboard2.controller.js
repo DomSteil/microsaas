@@ -30,7 +30,7 @@ class Dashboard2Controller {
 
 
     $http.get(appConfig.keyserver + 'contracts/Account').then(response => {
-      response.data.forEach(account => {
+      response.data.forEach(contract => {
         $http.get(appConfig.keyserver + 'contracts/Account/' + contract + '/state/').then(response => {
           console.log("MICROSAASaccount");
           console.log(response);
