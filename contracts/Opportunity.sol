@@ -23,7 +23,6 @@ contract Opportunity {
   string industry;
   string customerRating;
   string description;
-  string status;
   string closeDate;
   string createdDate;
   uint stateInt;
