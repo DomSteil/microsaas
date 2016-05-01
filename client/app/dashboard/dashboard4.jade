@@ -1,0 +1,50 @@
+navbar
+
+.internal--page__wrapper.dashboard-page
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h1 MicroSaas
+        .panel.panel-default.col-md-5
+          .panel-body
+            |  
+            p 
+              strong Main Address: 
+              | {{user}}
+            p 
+              strong UST: 
+              br
+              | {{balance}}
+        .col-md-7
+          a.btn.btn-primary.pull-right(href="/swap/new", ng-show="name == 'Dom'")
+            span.glyphicon.glyphicon-plus 
+            &nbsp;
+            | New Contact
+
+    .row
+      .col-md-10.col-md-offset-1
+
+        h3(ng-show="contacts.length == 0 ") No contacts yet
+
+        table.table.table-striped(ng-show=" contacts.length >= 1 ")
+          thead
+            tr
+              th Contact Name 
+              th Contact Owner
+              th Title
+              th Email
+              th Phone
+          tbody
+            tr(ng-repeat="contact in accounts | orderBy: 'stateInt'")
+              td 
+                a(href="/swap/{{contact.address}}/issuance") {{contact.id}} 
+              td {{contact.contactName}}
+              td {{contact.contactOwner}}
+              td {{contact.title}}
+              td {{contact.email}}
+              td {{contact.phone}}
+              td(ng-show="contact.stateInt < 5") OPEN 
+              td(ng-show="contact.stateInt == 5") CLOSED 
+        
+
+footer
