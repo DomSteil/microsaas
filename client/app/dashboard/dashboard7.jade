@@ -1,0 +1,50 @@
+navbar
+
+.internal--page__wrapper.dashboard-page
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h1 MicroSaas
+        .panel.panel-default.col-md-5
+          .panel-body
+            |  
+            p 
+              strong Main Address: 
+              | {{user}}
+            p 
+              strong UST: 
+              br
+              | {{balance}}
+        .col-md-7
+          a.btn.btn-primary.pull-right(href="/swap/new", ng-show="name == 'Dom'")
+            span.glyphicon.glyphicon-plus 
+            &nbsp;
+            | New Order
+
+    .row
+      .col-md-10.col-md-offset-1
+
+        h3(ng-show="orders.length == 0 ") No orders yet
+
+        table.table.table-striped(ng-show=" orders.length >= 1 ")
+          thead
+            tr
+              th Order ID
+              th Order Name 
+              th Products
+              th Price
+              th Activation Date
+              th Status
+          tbody
+            tr(ng-repeat="order in orderss | orderBy: 'stateInt'")
+              td 
+                a(href="/swap/{{order.address}}/issuance") {{order.id}} 
+              td {{order.orderName}}
+              td {{order.orderProducts}}
+              td {{order.orderPrice}}
+              td {{order.activationDate}}
+              td(ng-show="order.stateInt < 5") OPEN 
+              td(ng-show="order.stateInt == 5") CLOSED 
+        
+
+footer
