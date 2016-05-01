@@ -36,7 +36,7 @@ class DashboardController {
           console.log(response);
           response.data.address = contract;
           response.data.id = contract.substr(0, 4);
-          $scope.pizzas.push(response.data);
+          $scope.quotes.push(response.data);
         });
       });
     });
@@ -46,6 +46,6 @@ class DashboardController {
 }
 
 angular.module('microsaas')
-  .controller('DashboardController', DashboardController);
+  .controller('Dashboard5Controller', Dashboard5Controller);
 
 })();
