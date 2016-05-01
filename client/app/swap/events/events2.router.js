@@ -6,7 +6,7 @@ angular.module('microsaas')
       .state('events', {
         url: '/swap/{id:string}/events',
         templateUrl: 'app/swap/events/events.html',
-        controller: 'EventsController',
+        controller: 'Events2Controller',
         controllerAs: 'Events'
       });
   });
