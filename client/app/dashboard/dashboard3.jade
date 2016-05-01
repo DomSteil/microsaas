@@ -29,14 +29,16 @@ navbar
         table.table.table-striped(ng-show=" opportunities.length >= 1 ")
           thead
             tr
+              th Oppportunity ID
               th Opportunity Name 
               th Opportunity Owner
               th Type
               th Industry
               th Customer Rating
-              th Status
+              th Description
               th Close Date
               th Created Date
+              th Status
           tbody
             tr(ng-repeat="opportunity in opportunities | orderBy: 'stateInt'")
               td 
@@ -47,7 +49,6 @@ navbar
               td {{opportunity.industry}}
               td {{opportunity.customerRating}}
               td {{opportunity.description}}
-              td {{opportunity.status}}
               td {{opportunity.closeDate}}
               td {{opportunity.createdDate}}
               td(ng-show="opportunity.stateInt < 5") OPEN 
