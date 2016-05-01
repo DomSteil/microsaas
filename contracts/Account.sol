@@ -29,7 +29,7 @@ contract Account {
   function Account() {
     seller = msg.sender;
 
-    stateMessage = "Created new Account";
+    stateMessage = "Created New Account";
     stateInt = 1;
 
     message = stateMessage;
