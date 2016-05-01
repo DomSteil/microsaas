@@ -5,7 +5,7 @@ angular.module('microsaas')
     $stateProvider
       .state('swap', {
         url: '/swap/new',
-        templateUrl: 'app/swap/swap.html',
+        templateUrl: 'app/swap/swap5.html',
         controller: 'Swap5Controller',
         controllerAs: 'swap'
       });
