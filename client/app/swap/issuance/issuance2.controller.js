@@ -127,6 +127,6 @@ class Issuance2Controller {
 }
 
 angular.module('microsaas')
-  .controller('IssuanceController', IssuanceController);
+  .controller('Issuance2Controller', Issuance2Controller);
 
 })();
