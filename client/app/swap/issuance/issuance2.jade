@@ -31,7 +31,7 @@ toast
                 strong Topping: 
                 span.contract-detail {{contractState.quoteProducts}}
           .btn.btn-primary(ng-click="showOrderModal()", ng-show="name != 'dom' && contractState.stateInt < 3") Buy Quote To Order 
-          a(href="/swap/{{contract.address}}/events").btn.btn-primary( ng-show="contractState.stateMessage == 'Buyer accepted the quote'") Rate Quote Satisfaction
+          a(href="/swap/{{contract.address}}/events").btn.btn-primary( ng-show="contractState.stateMessage == 'Products delivered, quote was accurate'") Rate Quote Satisfaction
 
       
 .modal.fade#sign-transaction
@@ -46,7 +46,7 @@ toast
           span.material-input
       .modal-footer
         button.btn.btn-default(type='button', data-dismiss='modal') Cancel 
-        button.btn.btn-primary(type='button', ng-click="orderPizza()") Send Transaction
+        button.btn.btn-primary(type='button', ng-click="orderPizza()") Accept Quote
 .modal.fade#mining-transaction
   .modal-dialog
     .modal-content
