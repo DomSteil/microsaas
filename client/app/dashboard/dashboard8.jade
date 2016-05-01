@@ -1,0 +1,50 @@
+navbar
+
+.internal--page__wrapper.dashboard-page
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h1 MicroSaas
+        .panel.panel-default.col-md-5
+          .panel-body
+            |  
+            p 
+              strong Main Address: 
+              | {{user}}
+            p 
+              strong UST: 
+              br
+              | {{balance}}
+        .col-md-7
+          a.btn.btn-primary.pull-right(href="/swap/new", ng-show="name == 'Dom'")
+            span.glyphicon.glyphicon-plus 
+            &nbsp;
+            | New Asset
+
+    .row
+      .col-md-10.col-md-offset-1
+
+        h3(ng-show="assets.length == 0 ") No assets yet
+
+        table.table.table-striped(ng-show=" assets.length >= 1 ")
+          thead
+            tr
+              th Asset ID
+              th Asset Name 
+              th Products
+              th Price
+              th Activation Date
+              th Status
+          tbody
+            tr(ng-repeat="asset in assets | orderBy: 'stateInt'")
+              td 
+                a(href="/swap/{{asset.address}}/issuance") {{asset.id}} 
+              td {{asset.assetName}}
+              td {{asset.assetProducts}}
+              td {{asset.assetPrice}}
+              td {{asset.activationDate}}
+              td(ng-show="asset.stateInt < 5") OPEN 
+              td(ng-show="asset.stateInt == 5") CLOSED 
+        
+
+footer
