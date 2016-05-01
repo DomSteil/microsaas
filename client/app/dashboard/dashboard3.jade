@@ -1,0 +1,57 @@
+navbar
+
+.internal--page__wrapper.dashboard-page
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h1 MicroSaas
+        .panel.panel-default.col-md-5
+          .panel-body
+            |  
+            p 
+              strong Main Address: 
+              | {{user}}
+            p 
+              strong UST: 
+              br
+              | {{balance}}
+        .col-md-7
+          a.btn.btn-primary.pull-right(href="/swap/new", ng-show="name == 'Dom'")
+            span.glyphicon.glyphicon-plus 
+            &nbsp;
+            | New Opportunity
+
+    .row
+      .col-md-10.col-md-offset-1
+
+        h3(ng-show="opportunities.length == 0 ") No Opportunities yet
+
+        table.table.table-striped(ng-show=" opportunities.length >= 1 ")
+          thead
+            tr
+              th Opportunity Name 
+              th Opportunity Owner
+              th Type
+              th Industry
+              th Customer Rating
+              th Status
+              th Close Date
+              th Created Date
+          tbody
+            tr(ng-repeat="opportunity in opportunities | orderBy: 'stateInt'")
+              td 
+                a(href="/swap/{{account.address}}/issuance") {{opportunity.id}} 
+              td {{opportunity.opportunityName}}
+              td {{opportunity.opportunityOwner}}
+              td {{opportunity.type}}
+              td {{opportunity.industry}}
+              td {{opportunity.customerRating}}
+              td {{opportunity.description}}
+              td {{opportunity.status}}
+              td {{opportunity.closeDate}}
+              td {{opportunity.createdDate}}
+              td(ng-show="opportunity.stateInt < 5") OPEN 
+              td(ng-show="opportunity.stateInt == 5") CLOSED 
+        
+
+footer
