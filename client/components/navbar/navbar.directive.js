@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('pizzaSwapApp')
+angular.module('microsaas')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',
