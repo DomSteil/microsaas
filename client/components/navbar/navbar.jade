@@ -21,6 +21,16 @@ div.navbar.navbar-inverse.navbar-fixed-top(ng-controller='NavbarController', ng-
                 span.user-name UST: {{profile.balance}}
             ul.dropdown-menu.pull-right(aria-labelledby='dropdownMenu1')
               li
+                a(ng-click="account()") Accounts
+              li
+                a(ng-click="opportunity()") Opportunities
+              li
+                a(ng-click="contact()") Contacts
+              li
+                a(ng-click="quotes()") Quotes
+              li
+                a(ng-click="contracts()") Contracts  
+              li
                 a(href='#') Settings 
               li
                 a(ng-click="logout()") Logout
