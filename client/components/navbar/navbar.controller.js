@@ -40,5 +40,5 @@ class NavbarController {
   }
 }
 
-angular.module('pizzaSwapApp')
+angular.module('microsaas')
   .controller('NavbarController', NavbarController);
