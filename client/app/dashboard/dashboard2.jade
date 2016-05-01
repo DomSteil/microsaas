@@ -29,12 +29,14 @@ navbar
         table.table.table-striped(ng-show=" accounts.length >= 1 ")
           thead
             tr
+              th Account ID
               th Account Name 
               th Account Owner
               th Type
               th Industry
               th Customer Rating
               th Description
+              th Status
           tbody
             tr(ng-repeat="account in accounts | orderBy: 'stateInt'")
               td 
