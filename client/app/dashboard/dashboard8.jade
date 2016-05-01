@@ -34,6 +34,7 @@ navbar
               th Products
               th Price
               th Activation Date
+              th Asset Status
               th Status
           tbody
             tr(ng-repeat="asset in assets | orderBy: 'stateInt'")
@@ -43,6 +44,7 @@ navbar
               td {{asset.assetProducts}}
               td {{asset.assetPrice}}
               td {{asset.activationDate}}
+              td {{asset.assetStatus}}
               td(ng-show="asset.stateInt < 5") OPEN 
               td(ng-show="asset.stateInt == 5") CLOSED 
         
