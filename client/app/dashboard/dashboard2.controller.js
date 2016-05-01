@@ -45,7 +45,7 @@ class Dashboard2Controller {
 
 }
 
-angular.module('pizzaSwapApp')
+angular.module('microsaas')
   .controller('DashboardController', DashboardController);
 
 })();
