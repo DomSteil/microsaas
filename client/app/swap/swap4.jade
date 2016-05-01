@@ -1,0 +1,30 @@
+navbar
+
+.internal--page__wrapper
+  .container.swap-form__wrapper
+    .row
+      .col-md-10.col-md-offset-1.swap-form
+        h1.text-center New Contact
+        form.form-horizontal.swap-form
+          #pizza-time
+            .col-md-12
+              .panel.panel-default
+                .panel-heading Contact Details
+                .panel-body
+                  input.form-control(type='text', ng-model="contactContract.contactName")
+                  input.form-control(type='text', ng-model="contactContract.contactOwner")
+                  input.form-control(type='text', ng-model="contactContract.title")
+                  input.form-control(type='text', ng-model="contactContract.email")
+                  input.form-control(type='text', ng-model="contactContract.phone")
+                
+  
+    .row
+      .col-md-6.col-md-offset-3
+        .btn.btn-primary.btn-block(ng-click="submit()") Submit 
+
+.modal.fade#mining-transaction
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4.modal-title  Creating Contact...
+      .modal-body
