@@ -29,11 +29,13 @@ navbar
         table.table.table-striped(ng-show=" contacts.length >= 1 ")
           thead
             tr
+              th Contact ID
               th Contact Name 
               th Contact Owner
               th Title
               th Email
               th Phone
+              th Status
           tbody
             tr(ng-repeat="contact in accounts | orderBy: 'stateInt'")
               td 
