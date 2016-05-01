@@ -6,7 +6,7 @@ angular.module('microsaas')
       .state('dashboard', {
         url: '/dashboard/{name:string}',
         templateUrl: 'app/dashboard/dashboard4.html',
-        controller: 'DashboardController',
+        controller: 'Dashboard4Controller',
         controllerAs: 'dashboard'
       });
   });
