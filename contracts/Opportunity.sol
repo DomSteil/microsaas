@@ -31,7 +31,7 @@ contract Opportunity {
   function Opportunity() {
     seller = msg.sender;
 
-    stateMessage = "Created new Opportunity";
+    stateMessage = "Created New Opportunity";
     stateInt = 1;
 
     message = stateMessage;
