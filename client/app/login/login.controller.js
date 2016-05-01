@@ -72,7 +72,7 @@ class LoginController {
 
 }
 
-angular.module('pizzaSwapApp')
+angular.module('microsaas')
   .controller('LoginController', LoginController);
 
 })();
