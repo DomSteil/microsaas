@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-class EventsController {
+class Events2Controller {
   constructor($http, $stateParams, $scope, appConfig, cfpLoadingBar, localStorageService, $state) {
     var name = localStorageService.get('user');
     $scope.createQuote = {};
@@ -68,5 +68,5 @@ class EventsController {
 }
 
 angular.module('microsaas')
-  .controller('EventsController', EventsController);
+  .controller('Events2Controller', Events2Controller);
 })();
