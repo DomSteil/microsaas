@@ -6,7 +6,7 @@ angular.module('microsaas')
       .state('issuance', {
         url: '/swap/{id:string}/issuance',
         templateUrl: 'app/swap/issuance/issuance3.html',
-        controller: 'IssuanceController',
+        controller: 'Issuance3Controller',
         controllerAs: 'issuance'
       });
   });
