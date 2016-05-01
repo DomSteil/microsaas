@@ -54,16 +54,15 @@
     </script>
 
     <div id="contract_source" style="display: none;">
-contract Pizza {
+contract Account {
   /**
    * It is helpful to think of
    * smart contracts as state machine.
    * In this example:
-   * State 1: Deploy new smart pizza contract
-   * State 2: Set pizza details; price, toppings, and guarante
-   * State 3: Smart contract is funned by buyer
-   * State 4: Pizza is being delivered
-   * State 5: Pizzed has arrived and buyer has indicated the satisfaction level
+   * State 1: Deploy new account contract
+   * State 2: Set account details
+   * State 3: Change account details
+   * State 4: Delete account
    */
 
   address seller;
@@ -71,70 +70,156 @@ contract Pizza {
   address oracle;
   address satisfactionOracle;
 
-  uint pizzaPrice;
-  uint guarantee;
+  uint phoneNumber;
+  uint annualRevenue;
   uint eth = 1000000000000000000;
 
-  string pizzaToppings;
-  string stateMessage;
-  string message;
+  string accountName;
+  string accountOwner;
+  string type;
+  string industry;
+  string customerRating;
+  string description;
   uint stateInt;
 
-  function Pizza() {
+  function Account() {
     seller = msg.sender;
 
-    stateMessage = "Uploaded pizza smart contract";
+    stateMessage = "Created new Account";
     stateInt = 1;
 
     message = stateMessage;
     //eth = 1000000000000000000; // for some reason constructor isn't called
   }
 
-  function setUpPizzaDetails(uint price, string topping) {
-    stateMessage = "Pizza details set";
+  /**
+   * Set the details specific to this pizza 
+   */
+  function setUpAccountDetails(uint price, uint phoneNumber, uint annualRevenue,  string accountName, string accountOwner, string type, string industry, string customerRating, string description, address oracleAddress) {
+    stateMessage = "Account details set";
     message = stateMessage;
+    oracle = oracleAddress;
     stateInt = 2;
-    pizzaPrice = price;
-    pizzaToppings = topping;
+    accountPrice = .01;
+    accountName = accountName;
+	accountOwner = buyer;
+	type = type;
+	industry = industry;
+	description = description;
+	customerRating = customerRating;
+	
   }
 
-  function buyerAcceptsPizzaContract() {
-    message = "why is this breaking";
-    if (msg.value >=  eth * pizzaPrice) {
-      buyer = msg.sender;
-      stateInt = 3;
-      stateMessage = "Buyer funded pizza contract";
-      message = stateMessage;
-      // TODO - refund change ??
-    } else {
-      msg.sender.send(msg.value);
-      message = "Contract not funded. Refunded money";
-    }
+contract Opportunity {
+  /**
+   * It is helpful to think of
+   * smart contracts as state machine.
+   * In this example:
+   * State 1: Deploy new account contract
+   * State 2: Set account details
+   * State 3: Change account details
+   * State 4: Delete account
+   */
+
+  address seller;
+  address buyer;
+  address oracle;
+  address satisfactionOracle;
+
+  uint amount;
+  uint eth = 1000000000000000000;
+
+  string opportunityName;
+  string opportunityOwner;
+  string type;
+  string industry;
+  string customerRating;
+  string description;
+  string status;
+  string closeDate;
+  string createdDate;
+  uint stateInt;
+
+  function Opportunity() {
+    seller = msg.sender;
+
+    stateMessage = "Created new Opportunity";
+    stateInt = 1;
+
+    message = stateMessage;
+    //eth = 1000000000000000000; // for some reason constructor isn't called
   }
 
-  function pizzaAccepted() {
-    if (msg.sender == buyer) {
-      stateInt = 4;
-      stateMessage = "Pizza Delivered";
-      message = stateMessage;
-      seller.send(this.balance);
-    } else {
-      message = "Only buyer can accept";
-    }
+  /**
+   * Set the details specific to this pizza 
+   */
+  function setUpOpportunityDetails(uint price, uint amount,  string opportunityName, string opportunityOwner, string closeDate, string createdDate, string type, string industry, string description, address oracleAddress) {
+    stateMessage = "Opportunity details set";
+    message = stateMessage;
+    oracle = oracleAddress;
+    stateInt = 2;
+    opportunityPrice = .03;
+    opportunityName = opportunityName;
+	opportunityOwner = buyer;
+	createdDate = createdDate;
+	closeDate = closeDate;
+	description = description;
+	
   }
 
-  function rateSatisfaction(bool isHappy) {
-    stateInt = 5;
-    if (isHappy) {
-      stateMessage = "Pizza deliverd, buyer was happy";
-      seller.send(this.balance);
-    } else {
-      stateMessage = "Pizza delivered, buyer was not happy";
-      buyer.send(this.balance);
-    }
+contract Contact {
+  /**
+   * It is helpful to think of
+   * smart contracts as state machine.
+   * In this example:
+   * State 1: Deploy new account contract
+   * State 2: Set account details
+   * State 3: Change account details
+   * State 4: Delete account
+   */
+
+  address seller;
+  address buyer;
+  address oracle;
+  address satisfactionOracle;
+  uint eth = 1000000000000000000;
+
+  string contactName;
+  string contactOwner;
+  string title;
+  string email;
+  string phone;
+  uint stateInt;
+
+  function Contact() {
+    seller = msg.sender;
+
+    stateMessage = "Created new Contact";
+    stateInt = 1;
+
+    message = stateMessage;
+    //eth = 1000000000000000000; // for some reason constructor isn't called
   }
 
-}</div>
+  /**
+   * Set the details specific to this pizza 
+   */
+  function setUpContactDetails(uint price, uint amount,  string contactName, string email, string phone, string contactOwner, string title, address oracleAddress) {
+    stateMessage = "Contact details set";
+    message = stateMessage;
+    oracle = oracleAddress;
+    stateInt = 2;
+    contactPrice = .02;
+    contactName = contactName;
+	contactOwner = buyer;
+	title = title;
+	phone = phone;
+	email = email;
+	
+  }
+
+
+</div>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
