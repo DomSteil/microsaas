@@ -9,7 +9,9 @@ class Swap7Controller {
     $scope.orderContract= {
       orderName: '',
       orderPrice: '',
-	  products: ''
+	  products: '',
+	  activationDate: '',
+	  orderStatus
       //,
       //oracleAddress: ''
     };
@@ -62,7 +64,9 @@ class Swap7Controller {
           "args": {
             "orderName": $scope.orderContract.orderName,
 			"orderPrice": $scope.orderContract.orderPrice,
-			"products": $scope.orderContract.products
+			"products": $scope.orderContract.products,
+			"activationDate": $scope.orderContract.activationDate,
+			"orderStatus": $scope.orderContract.orderStatus
 			
 			
             //,
