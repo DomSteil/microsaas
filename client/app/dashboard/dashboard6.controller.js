@@ -2,7 +2,7 @@
 
 (function() {
 
-class DashboardController {
+class Dashboard6Controller {
 
   constructor($http, $scope, $stateParams, appConfig, cfpLoadingBar, localStorageService) {
     this.$http = $http;
@@ -46,6 +46,6 @@ class DashboardController {
 }
 
 angular.module('microsaas')
-  .controller('DashboardController', DashboardController);
+  .controller('Dashboard6Controller', Dashboard6Controller);
 
 })();
