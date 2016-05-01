@@ -53,10 +53,10 @@ class NavbarController {
       $location.path('/agreement')
     }
     $scope.agreement = function(){
-      $location.path('/orders')
+      $location.path('/order')
     }
     $scope.agreement = function(){
-      $location.path('/assets')
+      $location.path('/asset')
     }
   }
 }
