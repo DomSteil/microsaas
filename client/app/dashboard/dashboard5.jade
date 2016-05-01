@@ -1,0 +1,48 @@
+navbar
+
+.internal--page__wrapper.dashboard-page
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h1 MicroSaas
+        .panel.panel-default.col-md-5
+          .panel-body
+            |  
+            p 
+              strong Main Address: 
+              | {{user}}
+            p 
+              strong UST: 
+              br
+              | {{balance}}
+        .col-md-7
+          a.btn.btn-primary.pull-right(href="/swap/new", ng-show="name == 'Dom'")
+            span.glyphicon.glyphicon-plus 
+            &nbsp;
+            | New Quote
+
+    .row
+      .col-md-10.col-md-offset-1
+
+        h3(ng-show="quotes.length == 0 ") No quotes yet
+
+        table.table.table-striped(ng-show=" quotes.length >= 1 ")
+          thead
+            tr
+              th Quote ID
+              th Quote Name 
+              th Products
+              th Price
+              th Status
+          tbody
+            tr(ng-repeat="quote in quotes | orderBy: 'stateInt'")
+              td 
+                a(href="/swap/{{quote.address}}/issuance") {{quote.id}} 
+              td {{quote.quoteName}}
+              td {{quote.quoteProducts}}
+              td {{contact.quotePrice}}
+              td(ng-show="contact.stateInt < 5") OPEN 
+              td(ng-show="contact.stateInt == 5") CLOSED 
+        
+
+footer
