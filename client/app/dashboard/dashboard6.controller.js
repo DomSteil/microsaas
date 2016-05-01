@@ -7,7 +7,7 @@ class DashboardController {
   constructor($http, $scope, $stateParams, appConfig, cfpLoadingBar, localStorageService) {
     this.$http = $http;
     this.awesomeThings = [];
-    $scope.quotes = [];
+    $scope.contracts = [];
 
     /**
      * We are saving user data in local storage.
@@ -29,10 +29,10 @@ class DashboardController {
 
 
 
-    $http.get(appConfig.keyserver + 'contracts/Quote').then(response => {
+    $http.get(appConfig.keyserver + 'contracts/Contract').then(response => {
       response.data.forEach(contract => {
-        $http.get(appConfig.keyserver + 'contracts/Quote/' + contract + '/state/').then(response => {
-          console.log("MICROSAASquote");
+        $http.get(appConfig.keyserver + 'contracts/Contract/' + contract + '/state/').then(response => {
+          console.log("MICROSAAScontract");
           console.log(response);
           response.data.address = contract;
           response.data.id = contract.substr(0, 4);
