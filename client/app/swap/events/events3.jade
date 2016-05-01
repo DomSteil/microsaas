@@ -1,0 +1,32 @@
+
+navbar
+
+.internal--page__wrapper
+  .container
+    .row
+      .col-md-10.col-md-offset-1.text-center
+        h1 Quote: 
+            br
+            span.contract-id {{id}}
+        .col-md-6.col-md-offset-3
+          p.lead Tell the contract verification oracle if the contract was accurate.
+          .list-group
+            .list-group-item
+              .btn.btn-primary.btn-block(ng-click="rateContract(true)") Accurate
+              .btn.btn-primary.btn-block(ng-click="rateContract(false)") InAccurate
+
+.modal.fade#contractConfirmation
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4.modal-title  Contract Status
+      .modal-body
+        p.lead(ng-show="isAccurate") The contract has been accepted! :)
+        p.lead(ng-show="!isAccurate") The contract was rejected. :(  
+.modal.fade#mining-transaction
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4.modal-title  Accepting Contract...
+      .modal-body
