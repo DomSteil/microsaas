@@ -78,7 +78,7 @@ contract Contract {
   /**
    * To rating for the pizza must come from the oracle 
    */
-  function rateSatisfaction(bool isAccurate) {
+  function rateContract(bool isAccurate) {
     if(msg.sender == oracle) {
       stateInt = 5;
       if (isAccurate) {
