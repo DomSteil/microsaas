@@ -37,7 +37,7 @@ navbar
               th Phone
               th Status
           tbody
-            tr(ng-repeat="contact in accounts | orderBy: 'stateInt'")
+            tr(ng-repeat="contact in contacts | orderBy: 'stateInt'")
               td 
                 a(href="/swap/{{contact.address}}/issuance") {{contact.id}} 
               td {{contact.contactName}}
