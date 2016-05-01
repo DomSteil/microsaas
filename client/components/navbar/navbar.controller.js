@@ -37,6 +37,21 @@ class NavbarController {
       localStorageService.set('address', '');
       $location.path('/login');
     }
+    $scope.account = function(){
+      $location.path('/account')
+    }
+    $scope.opportunity = function(){
+      $location.path('/opportunity')
+    }
+    $scope.contact = function(){
+      $location.path('/contact')
+    }
+    $scope.quote = function(){
+      $location.path('/quote')
+    }
+    $scope.agreement = function(){
+      $location.path('/agreement')
+    }
   }
 }
 
