@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-class EventsController {
+class Events3Controller {
   constructor($http, $stateParams, $scope, appConfig, cfpLoadingBar, localStorageService, $state) {
     var name = localStorageService.get('user');
     $scope.createContract = {};
