@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('pizzaSwapApp', [
-  'pizzaSwapApp.constants',
+angular.module('microsaas', [
+  'microsaas.constants',
   'ngCookies',
   'ngResource',
   'ngSanitize',
