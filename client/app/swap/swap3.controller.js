@@ -116,7 +116,7 @@ class Swap3Controller {
 
 }
 
-angular.module('pizzaSwapApp')
+angular.module('microsaas')
   .controller('Swap3Controller', Swap3Controller);
 
 })();
