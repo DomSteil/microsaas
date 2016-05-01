@@ -27,7 +27,7 @@ contract Contract {
   function Contract() {
     seller = msg.sender;
 
-    stateMessage = "Uploaded Contract";
+    stateMessage = "Created New Contract";
     stateInt = 1;
 
     message = stateMessage;
