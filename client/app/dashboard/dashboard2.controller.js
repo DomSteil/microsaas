@@ -35,7 +35,7 @@ class Dashboard2Controller {
           console.log("MICROSAASaccount");
           console.log(response);
           response.data.address = contract;
-          response.data.id = contrac.substr(0, 4);
+          response.data.id = contract.substr(0, 4);
           $scope.contract.push(response.data);
         });
       });
