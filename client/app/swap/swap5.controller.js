@@ -2,7 +2,7 @@
 
 (function() {
 
-class Swap4Controller {
+class Swap5Controller {
 
   constructor($http, $scope, $stateParams, appConfig, cfpLoadingBar, $location, localStorageService, $state) {
 
