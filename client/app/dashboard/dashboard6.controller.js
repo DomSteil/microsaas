@@ -36,7 +36,7 @@ class Dashboard6Controller {
           console.log(response);
           response.data.address = contract;
           response.data.id = contract.substr(0, 4);
-          $scope.pizzas.push(response.data);
+          $scope.contracts.push(response.data);
         });
       });
     });
