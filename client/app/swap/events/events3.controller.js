@@ -40,7 +40,7 @@ class Events3Controller {
         "args": {
           "isHappy": $scope.isAccurate
         },
-        "contract": "Contract"
+        "contract": "ContractContract"
       };
 
       var req = {
