@@ -34,9 +34,9 @@ class Dashboard2Controller {
         $http.get(appConfig.keyserver + 'contracts/Account/' + contract + '/state/').then(response => {
           console.log("MICROSAASaccount");
           console.log(response);
-          response.data.address = account;
-          response.data.id = account.substr(0, 4);
-          $scope.account.push(response.data);
+          response.data.address = contract;
+          response.data.id = contrac.substr(0, 4);
+          $scope.contract.push(response.data);
         });
       });
     });
