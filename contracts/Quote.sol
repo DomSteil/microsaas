@@ -27,7 +27,7 @@ contract Quote {
   function Quote() {
     seller = msg.sender;
 
-    stateMessage = "Uploaded Quote smart contract";
+    stateMessage = "Created New Quote";
     stateInt = 1;
 
     message = stateMessage;
